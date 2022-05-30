@@ -21,3 +21,7 @@
     background-color: #6B92EE;
     color: white;
 }
+
+.cell.cell-bomb {
+    background-color: red;
+}

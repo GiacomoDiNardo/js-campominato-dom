@@ -19,7 +19,14 @@ function gridsize (xCells, yCells) {
 
         //aggiungo evento al click
         cell.addEventListener ("click", function() {
+            //se non è una bomba si colora di blu
+            if (!bombsList.includes(i + 1)) {
             cell.classList.add("cell-event")
+                //se è una bomba si colora di rosso
+            } else {
+               cell.classList.add("cell-bomb")
+            }
+            
         })
     
         //inserisco le celle nel contenitore
@@ -28,16 +35,16 @@ function gridsize (xCells, yCells) {
 
     //creo un array per i numeri che rappresenteranno le bombe
     const bombsList = []
-
-    //genero numeri casuali per la posizione delle bombe
-    for (let i = 0; i < 16; i++) {
+    
+    do {
+        //genero numeri casuali per la posizione delle bombe
         const bombNumber = Math.floor(Math.random() * cellsNumber + 1);
 
         //pusho il numero solo se non è già presente nella lista
         if (!bombsList.includes(bombNumber)) {
             bombsList.push(bombNumber);
         }
-    }
+        } while (bombsList.length < 16)
 
     console.log(bombsList);
 
