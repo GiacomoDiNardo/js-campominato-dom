@@ -1,0 +1,23 @@
+:root{
+    --cell-size: 50px;
+}
+
+.game-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.cell {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell-event {
+    background-color: #6B92EE;
+    color: white;
+}
