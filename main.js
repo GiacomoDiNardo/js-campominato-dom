@@ -23,9 +23,9 @@ function gridsize (xCells, yCells) {
         //alert di fine partita
         function gameOver() {
             if (findBomb) {
-                alert("Hai perso! Hai totalizzato " + points + " punti")
+                alert("Hai perso! Hai totalizzato " + points + " punti");
             } else {
-                alert ("Hai vinto!!! Sei un grande.")
+                alert ("Hai vinto!!! Sei un grande.");
             }
         }
 
@@ -46,7 +46,7 @@ function gridsize (xCells, yCells) {
             //se non è una bomba si colora di blu
             if (!bombsList.includes(i + 1)) {
                 cell.classList.add("cell-event");
-                points += 1
+                points += 1;
                 //se è una bomba si colora di rosso
             } else {
                 cell.classList.add("cell-bomb");
@@ -64,8 +64,8 @@ function gridsize (xCells, yCells) {
     }
 
     //creo un array per i numeri che rappresenteranno le bombe
-    const bombsList = []
-
+    const bombsList = [];
+    
     do {
         //genero numeri casuali per la posizione delle bombe
         const bombNumber = Math.floor(Math.random() * cellsNumber + 1);
